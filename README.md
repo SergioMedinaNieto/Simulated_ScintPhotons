@@ -27,3 +27,16 @@ A simulation tool that models scintillation photon yield in Liquid Argon (LAr) d
    ```bash
    git clone https://github.com/yourusername/LAr_Simulation.git
    cd LAr_Simulation
+2. Prepare input data:
+   - Place your .root files in the data/ directory.
+   - Example file: muon_correlated.root.
+3. Compile and run:
+   ```bash
+   root -l -q src/main.C
+4. Generated plots will be saved in images/
+
+## Configuration
+Modify lar_utils.C to select recombination models (Birk model default):
+```bash
+bool fUseEllipsModBoxRecomb = true;  // Ellipsoid Modified Box
+bool fUseModBoxRecomb = false;       // Modified Box
