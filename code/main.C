@@ -18,7 +18,7 @@
 #include <iostream>
 #include <fstream>
 
-void toymodel2_0(){
+void main(){
 	
 	TString filename = "./data/muon_correlated.root";
 	int PDG =  13;
@@ -227,6 +227,6 @@ void toymodel2_0(){
 }
 
 int main() {
-    toymodel2_0();
+    main();
     return 0;
 }
