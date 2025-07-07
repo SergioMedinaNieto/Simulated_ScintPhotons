@@ -15,11 +15,15 @@ A simulation tool that models scintillation photon yield in Liquid Argon (LAr) d
 - Direct comparison with LArSoft simulation outputs
 - Energy deposition and photon yield histograms
 
-## Repository Structure
-LAr_Simulation/
-├── code/ # Input .root files
-├── images/ # Output plots
-├── src/
-│ ├── main.C # Main analysis program
-│ └── lar_utils.C # Physics utilities (header: lar_utils.h)
-└── README.md
+## Requirements
+
+- ROOT (v6.26/10 or later)
+- CLHEP libraries
+- C++17 compatible compiler
+
+## Installation & Usage
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/LAr_Simulation.git
+   cd LAr_Simulation
