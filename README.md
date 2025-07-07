@@ -91,6 +91,7 @@ double fFieldCorrection(double Efield, double dEdx) {
 
 ## Output file
 Example comparison plot:
+[Comparison between LArSoft scint photons simulation and our Toy Monte Carlo simulation for a muon (1 GeV) in liquid argon](./images/muon_correlated_NScintPhotonsR.pdf)
 
 
 
