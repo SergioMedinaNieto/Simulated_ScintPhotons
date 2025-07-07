@@ -40,3 +40,7 @@ Modify lar_utils.C to select recombination models (Birk model default):
 ```bash
 bool fUseEllipsModBoxRecomb = true;  // Ellipsoid Modified Box
 bool fUseModBoxRecomb = false;       // Modified Box
+```
+You can also see and modify the parameters of each model:
+```bash
+
