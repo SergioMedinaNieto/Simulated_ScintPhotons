@@ -66,5 +66,31 @@ double fEllipsModBoxR =  1.25;
 ```
 This file also contains the diferent fuctions based on the model you are using:
 ```bash
+double fBirks(double Efield, double dEdx) {
+	return fRecombA / (1. + dEdx * (fRecombk) / Efield);
+}
+
+double fModBoxRecomb(double Efield, double dEdx) {
+    double Xi = (fModBoxB) * dEdx / Efield;
+    return std::log(fModBoxA + Xi) / Xi;
+}
+
+double fEllipsModBoxRecomb(double Efield, double dEdx, double phi){
+	double B_ellips = fEllipsModBoxB * dEdx / (EfieldStep * std::hypot(std::sin(phi), std::cos(phi) / fEllipsModBoxR));
+	return std::log(fEllipsModBoxA + B_ellips) / B_ellips;
+}
+
+double fEscapingEFraction(double dEdx) {
+    return fLarqlChi0A / (fLarqlChi0B + std::exp(fLarqlChi0C + fLarqlChi0D * dEdx));
+}
+
+double fFieldCorrection(double Efield, double dEdx) {
+    return std::exp(-Efield / (fLarqlAlpha * std::log(dEdx) + fLarqlBeta));
+}
+```
+
+## Output file
+Example comparison plot:
+
 
 
