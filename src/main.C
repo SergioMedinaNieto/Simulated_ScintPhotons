@@ -125,9 +125,7 @@ void main(){
 		  					R = fModBoxRecomb(EfieldStep, dEdx);
 						}
 						else {
-							double B_ellips =
-		    					fEllipsModBoxB * dEdx / (EfieldStep * std::hypot(std::sin(phi), std::cos(phi) / fEllipsModBoxR));
-		  					R = std::log(fEllipsModBoxA + B_ellips) / B_ellips;
+							R = fEllipsModBoxRecomb(EFieldStep, dEdx, phi)
 						}
 	    				}
 		    			
