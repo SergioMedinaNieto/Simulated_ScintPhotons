@@ -43,4 +43,28 @@ bool fUseModBoxRecomb = false;       // Modified Box
 ```
 You can also see and modify the parameters of each model:
 ```bash
+// LArQL parameters
+double fLarqlChi0A = 0.00338427;
+double fLarqlChi0B = -6.57037;
+double fLarqlChi0C = 1.88418;
+double fLarqlChi0D = 0.000129379;
+double fLarqlAlpha = 0.0372;
+double fLarqlBeta  = 0.0124;
+
+// Birks parameters
+double fRecombA = 0.800;
+double fRecombk = 0.0486 / LAr_rho;
+
+// Modified Box Model parameters
+double fModBoxA = 0.930;
+double fModBoxB = 0.212 / LAr_rho;
+
+// Ellipsoid Modified Box Model parameters
+double fEllipsModBoxA =  9.04e-1;
+double fEllipsModBoxB =  2.04e-1 / LAr_rho;
+double fEllipsModBoxR =  1.25;
+```
+This file also contains the diferent fuctions based on the model you are using:
+```bash
+
 
