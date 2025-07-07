@@ -92,6 +92,11 @@ double fModBoxRecomb(double Efield, double dEdx) {
     return std::log(fModBoxA + Xi) / Xi;
 }
 
+double fEllipsModBoxRecomb(double Efield, double dEdx, double phi){
+	double B_ellips = fEllipsModBoxB * dEdx / (EfieldStep * std::hypot(std::sin(phi), std::cos(phi) / fEllipsModBoxR));
+	return std::log(fEllipsModBoxA + B_ellips) / B_ellips;
+}
+
 double fEscapingEFraction(double dEdx) {
     return fLarqlChi0A / (fLarqlChi0B + std::exp(fLarqlChi0C + fLarqlChi0D * dEdx));
 }
