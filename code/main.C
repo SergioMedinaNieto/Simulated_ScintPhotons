@@ -20,8 +20,8 @@
 
 void toymodel2_0(){
 	
-	TString filename = "./data/alpha_correlated.root";
-	int PDG =  1000020040;
+	TString filename = "./data/muon_correlated.root";
+	int PDG =  13;
 	
 	TFile *file = TFile::Open(filename);
 	if(!file || file->IsZombie()) {
