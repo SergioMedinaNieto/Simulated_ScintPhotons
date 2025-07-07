@@ -3,7 +3,7 @@
 ![ROOT](https://img.shields.io/badge/ROOT-6.26/10+-FF6D00?logo=root&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-17-blue?logo=c%2B%2B&logoColor=white)
 
-A simulation tool that models scintillation photon yield in Liquid Argon (LAr) detectors based on energy deposition and electric field effects, with comparison to LArSoft outputs.
+A simulation tool that models scintillation photon yield in Liquid Argon (LAr) detectors based on energy deposition and electric field effects with comparison to LArSoft outputs.
 
 ## Key Features
 
