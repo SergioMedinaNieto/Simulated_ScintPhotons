@@ -4,34 +4,46 @@
 #include <CLHEP/Vector/ThreeVector.h>
 using namespace CLHEP;
 
-// Definición de constantes
+// Constants' definitions
 double fWion = 23.6 * 1e-6; // MeV
 double fWph  = 19.5 * 1e-6; // MeV
 double LAr_rho = 1.38434; // g/cm3
 double fScintPreScale = 1.52e-1;
 double Efield = 0.5;
+
+// LArQL parameters
 double fLarqlChi0A = 0.00338427;
 double fLarqlChi0B = -6.57037;
 double fLarqlChi0C = 1.88418;
 double fLarqlChi0D = 0.000129379;
 double fLarqlAlpha = 0.0372;
 double fLarqlBeta  = 0.0124;
+
+// Birks parameters
+double fRecombA = 0.800;
+double fRecombk = 0.0486 / LAr_rho;
+
+// Modified Box Model parameters
+double fModBoxA = 0.930;
+double fModBoxB = 0.212 / LAr_rho;
+
+// Ellipsoid Modified Box Model parameters
 double fEllipsModBoxA =  9.04e-1;
 double fEllipsModBoxB =  2.04e-1 / LAr_rho;
 double fEllipsModBoxR =  1.25;
-double fRecombA = 0.800;
-double fRecombk = 0.0486 / LAr_rho;
-double fModBoxA = 0.930;
-double fModBoxB = 0.212 / LAr_rho;
+
+// Quenching parameters
 double fQAlpha = 0.72;
 double fQProton = 0.868882;
 
+// Parameters' model
 bool LArQL = true;
 bool fUseBinomialFlucts = true;
 bool fUseEllipsModBoxRecomb = true;
 bool fUseModBoxRecomb = false;
 
-/* Definición de funciones
+/* 
+Functions' definitions
    Efield : Campo eléctrico (kv/cm)
    dEdx : dEdx (MeV/cm) 
 */
@@ -68,7 +80,7 @@ double AngleToEFieldStep(double Efield, double x0, double y0, double z0, double 
 	double angle = std::acos(cosTheta);
 	
 	if (angle > TMath::PiOver2()) { angle = abs(TMath::Pi() - angle); }
-	return angle;//TMath::PiOver4();//angle;	
+	return angle;;	
 }
 
 double fModBoxRecomb(double Efield, double dEdx) {
