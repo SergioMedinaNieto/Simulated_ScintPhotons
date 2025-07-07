@@ -83,6 +83,10 @@ double AngleToEFieldStep(double Efield, double x0, double y0, double z0, double 
 	return angle;;	
 }
 
+double fBirks(double Efield, double dEdx) {
+	return fRecombA / (1. + dEdx * (fRecombk) / Efield);
+}
+
 double fModBoxRecomb(double Efield, double dEdx) {
     double Xi = (fModBoxB) * dEdx / Efield;
     return std::log(fModBoxA + Xi) / Xi;
@@ -96,6 +100,3 @@ double fFieldCorrection(double Efield, double dEdx) {
     return std::exp(-Efield / (fLarqlAlpha * std::log(dEdx) + fLarqlBeta));
 }
 
-double fBirks(double Efield, double dEdx) {
-	return fRecombA / (1. + dEdx * (fRecombk) / Efield);
-}
